@@ -24,3 +24,9 @@ Sl:No	URL Link	Username	Password
 23	https://digitallabs.palmeto.co.in	Optum-Devops23	P@lmeto@123	Beemcherla Jahnavi
 24	https://digitallabs.palmeto.co.in	Optum-Devops24	P@lmeto@123	Pedasingu Tulasi Kumari
 25	https://digitallabs.palmeto.co.in	Optum-Devops25	P@lmeto@123	thallam venkata manasa
+
+
+https://digitallabs.palmeto.co.in	Optum-Devops26	P@lmeto@123 sai harshini 
+https://digitallabs.palmeto.co.in	Optum-Devops27	P@lmeto@123 Aishwarya 
+https://digitallabs.palmeto.co.in	Optum-Devops28	P@lmeto@123
+
