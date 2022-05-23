@@ -1,1 +1,67 @@
-Day1.txt
+What is Jenkins?
+----------------------------
+- CI tool
+- Dev in JAVA
+- Release
+			COMMUNITY 		- FREE - OS
+			Enterprise		PAID
+			Blue Ocean		FREE but pipeline
+			Jenkinx			Containers
+- version
+		2.X
+
+
+What is CI?
+---------------
+- Cont Integration.
+
+Auto Build + Auto Test
+----------------------
+	 imm Feedback
+
+
+ARCH		DEV	DEV		DEV			INFRA INFRA 	QA		QA	mgmr
+----------------------------------------------------------------------------
+PLAN -> CODE -> Analyze -> Build -> UT -> Pack -> Archive -> Dep2QA -> AT -> CC
+---------------------------------------------------------------------------------
+JIRA -> GIT -> SonarQube -> Maven -> Junit -> WAR -> Artifactory -> Ansible -> Selenium -> Jacoco
+=================================================================================================
+							Jenkins
+									ALL SDLC
+									ALL Tools
+									ALL TEAM
+
+
+							- Integ all tools
+							- imm feedback
+							- Scheduling
+
+How to install it?
+===========================
+https://pkg.jenkins.io/redhat-stable/
+
+ 10  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   11  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
+   12  clear
+   13   sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   14  yum install fontconfig java-11-openjdk
+   15  yum install jenkins
+   16  clear
+   17  history
+   18  clear
+   19  systemctl stop firewalld
+   20  systemctl disable firewalld
+   21  systemctl start jenkins
+   22  systemctl status jenkins
+   23  clear
+   24  ip a
+   25  more /var/lib/jenkins/secrets/initialAdminPassword
+
+
+http://192.168.1.13:8080/
+rajesh
+rajesh123
+
+
+
+
