@@ -129,6 +129,56 @@ docker pull httpd
   176  docker ps -a
   177  docker rm eed09d3f6193
   178  docker ps -a
+========================================================
+How to access Container?
+-------------------------------
 
+
+LAPTOP(APP) --> Console
+VMS -> ssh using bash
+--------------------------
+
+1 You can go inside a container n do somthing....
+- exec
+		u can run any executable inside a container.
+		BUT using exec & it & bash...u can go inside a container
+
+docker exec -it 65400e443ee0 bash
+
+2. Access from outside using IP address 
+ 185  docker exec 65400e443ee0 ls
+  186  docker exec 65400e443ee0 ps
+  187  docker exec 65400e443ee0 dddd
+  188  docker exec 65400e443ee0 free
+  189  clear
+  190  docker exec 65400e443ee0 df
+  191  clear
+  192  docker ps
+  193  docker exec -it 65400e443ee0 exec
+  194  docker exec -it 65400e443ee0 bash
+  195  clear
+  196  docker exec -it 65400e443ee0 bash
+  197  clear
+  198  docker ps
+  199  docker inspect 65400e443ee0
+  200  clear
+  201  ping 172.17.0.3
+  202  curl http://172.17.0.3
+  203  docker inspect 65400e443ee0
+
+
+run
+------------------------
+create + start + attached
+
+run -d
+------------------------
+create + start + de-attached
+
+docker run -d httpd
+
+docker run -d -p 80:80 httpd
+docker run -d -p 81:80 httpd
+docker run -d -p 82:80 httpd
 
 
