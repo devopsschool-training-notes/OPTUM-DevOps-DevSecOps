@@ -27,8 +27,16 @@ How Frequently u want to trigger this job?
 How do you want feedback?
 - email - rajesh@devopsschool.com
 
+================CUSTOM JAVA============================
 
+  138  cd /tmp/
+  139  ls
+  140  wget https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
+  143  tar -zxvf openjdk-11.0.1_linux-x64_bin.tar.gz
+  146  cd jdk-11.0.1
+  148  pwd
 
+# SET PATH of /tmp/jdk-11.0.1 into Jenkins under JDK in Global Tool config
 
 
 
