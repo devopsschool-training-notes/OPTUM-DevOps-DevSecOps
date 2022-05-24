@@ -180,5 +180,63 @@ docker run -d httpd
 docker run -d -p 80:80 httpd
 docker run -d -p 81:80 httpd
 docker run -d -p 82:80 httpd
+====================================
+Docker software
+
+Docker Image
+
+Docker registry - hub.docker.com
+
+Docker Container
+====================================
+How to create an docker image?
+
+BASE - ubuntu	+ update + git + apache2 == ramukaka
+		root filesystem
+
+$ docker run -itd ubuntu
+
+ 231  docker ps -a
+  232  docker run -itd ubuntu
+  233  docker ps
+  234  docker exec -it 76e6a965fb86 bash
+  235  docker ps
+  236  docker exec 76e6a965fb86 java
+  237  docker exec 76e6a965fb86 git
+  238  docker exec 76e6a965fb86 which apache2
+  239  ls
+  240  docker ps
+  241  docker cp get-docker.sh 76e6a965fb86:/opt
+  242  docker exec 76e6a965fb86 ls /opt
+  243  docker ps
+  244  docker commit -m"ub-up-git-ap-java" -a "rajesh Kumar" 76e6a965fb86 ramukaka
+  245  docker imahes
+  246  docker images
+  247  docker run -itd ramukaka
+  248  docker ps
+  249  docker exec 0e019f1091aa git
+
+
+INSIDE A CONT
+----
+  1  ls
+    2  ps
+    3  apt-get update
+    4  apt-get install git
+    5  git
+    6  which apache2
+    7  apt-get install apache2
+    8  which apache2
+    9  history
+
+
+docker commit -m"ub-up-git-ap-java" -a "rajesh Kumar" 76e6a965fb86 ramukaka
+
+
+
+
+
+
+
 
 
