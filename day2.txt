@@ -37,11 +37,98 @@ How do you want feedback?
   148  pwd
 
 # SET PATH of /tmp/jdk-11.0.1 into Jenkins under JDK in Global Tool config
-
-
-
-
-
-
-
+==============================
+Pipeline
+- Coding
+- UI
 =======================================================
+
+Docker
+=========================
+Managing Container
+
+PHYSCIAL ---> VMs --> Container
+
+What is Container?
+-----------------------------------
+FULLY independent APP Run time env.
+
+Managing
+-----------------
+Create -> Start  -> Stop -> Restart -> rm -> pause -> unpause
+
+https://www.youtube.com/watch?v=fh6WeJalapo
+
+============================================
+How to install docker?
+
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+$ sudo systemctl enable docker
+$ sudo systemctl start docker
+$ docker version
+$ docker info
+
+Container Workflow
+------------------------------
+create -> start -> stop -> restart -> kill -> start -> pause -> unpause -> Stop -> Remove
+
+PYSICAL Server --> CD(OS image) --> MACHINE -- START - STOP
+VIRTUAL Server --> ISO(OS image) --> VM - -- START - STOP
+Container --> Docker image  --> VM - -- START - STOP
+
+===================
+Docker image
+-- DO NOT CONTAIN KERNAL
+-- Container FULLY independent APP Run time env
+	OS --> (USER) -> JAVA --> TOMCAT -> APP
+    
+    OS =BOOT Filesystem +  ROOT FILESYSTEM
+		  (Kernal )				/	
+	Docker image == ROOT FILESYSTEM + USER  > JAVA --> TOMCAT -> APP
+
+From where we get docker images
+ - https://hub.docker.com/_/docker
+
+docker pull httpd
+
+ 142  docker info
+  143  clear
+  144  docker images
+  145  docker pull httpd
+  146  docker images
+  147  clear
+  148* docker
+  149  docker ps -a
+  150* docker c httpd
+  151  docker ps -a
+  152  docker create httpd
+  153  clear
+  154  docker ps -a
+  155  docker start eed09d3f6193
+  156  clear
+  157  docker ps -a
+  158  docker start 65400e443ee0
+  159  docker ps -a
+  160  c;ear
+  161  clear
+  162  docker ps -a
+  163  docker stop eed09d3f6193
+  164  docker ps -a
+  165  docker restart eed09d3f6193
+  166  docker ps -a
+  167  docker kill eed09d3f6193
+  168  docker ps -a
+  169  docker start eed09d3f6193
+  170  docker ps -a
+  171  docker pause eed09d3f6193
+  172  docker ps -a
+  173  docker unpause eed09d3f6193
+  174  docker ps -a
+  175  docker stop eed09d3f6193
+  176  docker ps -a
+  177  docker rm eed09d3f6193
+  178  docker ps -a
+
+
+
