@@ -1,0 +1,39 @@
+https://www.devopsschool.com/blog/configure-jenkins-first-job-of-java-code-base-with-maven-build-tool/
+=======================================================
+What is your Technology? - JAVA DOT NET PYTHON RUBY
+							WHICH VERSION???
+						Do we have same JAVA RUNNNG in jenkins server?
+
+Where i can find Source Code? - github - gitlab 
+								url 
+								https://github.com/devopsschool-demo-labs-projects/helloworld-java-maven
+								access of it...
+What is your builder?
+-----------------------
+		- master script --->
+		maven - gradle - shell - bash  - batch - powershell - python
+
+maven
+- https://www.youtube.com/watch?v=Z7SuDETrjaY
+- https://www.youtube.com/c/TheDevOpsSchool
+
+BUILD ---> compile
+UT ---> test
+Package --> package
+
+How Frequently u want to trigger this job?
+- @daily
+
+How do you want feedback?
+- email - rajesh@devopsschool.com
+
+
+
+
+
+
+
+
+
+
+=======================================================
