@@ -1,0 +1,62 @@
+Docker
+--------------------------
+
+Kubernetes
+----------------------------
+What is Kubernetes?
+- Containers orch
+- Manages multiple docker host --> Cont
+- Dev in Go
+- Open Source
+- Dev by Google But donated to CNCF
+
+-------------------------------------
+WHY Kubernetes?
+---------------------------------------
+SCALIBILITY
+
+How it works?  - Kubernetes Arch.
+======================================================================
+
+HUMAN(Laptop) =========>	Kubernetes Master(MACHINE)	==========> K8 Worker(S)(MACHINE)
+				   			---------------------------------------------
+											k8 Clustor
+
+HUMAN(Laptop) == Workstation
+=====================
+kubectl
+
+Kubernetes Master (LINUX)
+================================
+- docker			For Containers
+- kubectl		For API connection
+- kubelet		k8 Agent & init POD
+- kubeadm				For all Components of K8 and Admin tool
+	----> API Server		For All the Services(Function | Resources) of K8
+	----> Etcd			For Stroing all Data of k8 clustor
+	----> Schedular		For Assinging work(Container) to worker
+	----> Controller mgmr	For Controlling all the worker state
+	----> kube proxy		Networking services
+	----> Network Driver	Networking driver
+
+Kubernetes Worker (LINUX and WINDOWS)
+================================
+- docker			For Containers
+- kubectl		k8 Agent & init POD
+- kubelet		k8 Agent & init POD
+- kubeadm			For all Components of K8 and Admin tool
+	----> kube proxy
+	----> Network Driver
+
+
+
+
+
+
+
+
+
+
+
+
+
