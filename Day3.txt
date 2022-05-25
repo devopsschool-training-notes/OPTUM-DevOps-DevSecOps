@@ -1,3 +1,5 @@
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
+
 Docker
 --------------------------
 
@@ -49,10 +51,44 @@ Kubernetes Worker (LINUX and WINDOWS)
 	----> Network Driver
 
 
+===================================================
+Write 1 post notes for which has following topics.
+
+- What is kubernetes?
+- 5 reasons of using kubernetes
+- Each kubernetes Components & write 2-3 mins about each one of them.
+===============================================
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
 
 
+======================================
+How to use the master node as worker node in Kubernetes cluster?
+-------------------------------------------------
+kubectl taint nodes --all node-role.kubernetes.io/master-
+-------------------------------------------------
 
 
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 192.168.1.11:6443 --token 32s4e5.tp82donn8mkgvt85 \
+        --discovery-token-ca-cert-hash sha256:f0a8579ac758f61c1030e1355bd67170be02a0819dd805441221898e29aa6aa6
+[root@rajesh ~]#
 
 
 
