@@ -145,20 +145,65 @@ kubectl expose deploy my-dep --port=8080 --target-port=80 -n=raj1
 
 
 
+===================================================================
+How to install terraform?
+--------------------------------
+
+https://registry.terraform.io/providers/integrations/github/latest/docs
+How to download providers?
+----------------------------------
+provider "github" {}
 
 
+$ terraform init
+
+===============================
+providers
+		resources
+				arguements
+
+aws
+		instance
+				arguements
+
+github
+		repository
+				name
+
+github
+		github_repository
+				name
+
+resource "github_repository" "example" {
+  name        = "example"
+  description = "My awesome codebase"
+
+  visibility = "public"
+}
 
 
+How to create PAT in github?
+https://github.com/settings/tokens
 
+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
+-----------------------------------
+resource "github_repository" "example" {
+  name        = "example9999999"
+  description = "My awesome codebase hey"
 
+  visibility = "public"
+}
 
+------------------
+provider "github" {
+token = "XXXXXXX"
+owner = "XXXXXX"
+}
 
-
-
-
-
-
-
-
+terraform init
+terraform plan 
+terraform apply 
+terraform show
+terraform destroy
 
 
