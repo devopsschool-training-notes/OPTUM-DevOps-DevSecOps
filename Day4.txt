@@ -119,13 +119,29 @@ kubectl scale --replicas=10 deployment/my-dep -n=raj1
 
 
 
-Services
+Services == Loadbalancers
+				- Network LB
+=========================================
+
+kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=raj1
 
 
+kubectl expose deploy my-dep --port=8080 --target-port=80 -n=raj1 
 
-
-
-
+ 102  kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=raj1
+  103  kubectl get deploy -n=raj1
+  104  clear
+  105  kubectl expose -h
+  106  clear
+  107  kubectl get svc -n=raj1
+  108  kubectl expose deploy my-dep --port=8080 --target-port=80 -n=raj1
+  109  clear
+  110  kubectl get svc -n=raj1
+  111  kubectl describe svc my-dep -n=raj1
+  112  clear
+  113  ls
+  114  kubectl get svc -n=raj1
+  115  curl http://10.96.72.126:8080
 
 
 
