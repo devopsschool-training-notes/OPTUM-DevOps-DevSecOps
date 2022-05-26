@@ -1,0 +1,64 @@
+Troubleshooting and Debugging Commands:
+  describe      Show details of a specific resource or group of resources
+  logs          Print the logs for a container in a pod
+  attach        Attach to a running container
+  exec          Execute a command in a container
+  port-forward  Forward one or more local ports to a pod
+  cp            Copy files and directories to and from containers
+  auth          Inspect authorization
+
+
+
+
+ 31  kubectl apply -f pod.yaml -n=raj1
+   32  kubectl get pods -n=raj1
+   33  kubectl get pods -n=raj1 --show-lables
+   34  kubectl get pods -n=raj1 --show-labels
+   35  kubectl get pods -n=raj1 --show-labels -0 wide
+   36  kubectl get pods -n=raj1 --show-labels -o wide
+   37  ping 10.32.0.4
+   38* kubectl de
+   39  clear
+   40  ls
+   41  kubectl get pods -n=raj1 --show-labels -o wide
+   42  kubectl describe pod nodehelloworld.example.com1 -n=raj1
+   43  clear
+   44  ls
+   45  kubectl describe pod nodehelloworld.example.com1 -n=raj1
+   46  clear
+   47  kubectl logs nodehelloworld.example.com1 -n=raj1
+   48  kubectl get pods -n=raj1
+   49  curl http://10.32.0.4
+   50  kubectl logs nodehelloworld.example.com1 -n=raj1
+   51  curl http://10.32.0.4
+   52  kubectl logs nodehelloworld.example.com1 -n=raj1
+   53  kubectl attach nodehelloworld.example.com1 -n=raj1
+   54  clear
+   55  kubectl get pods -n=raj1
+   56  kubectl exec nodehelloworld.example.com1 ls -n=raj1
+   57  clear
+   58  kubectl exec -it nodehelloworld.example.com1 bash -n=raj1
+
+kubectl port-forward --address 0.0.0.0 pod/nodehelloworld.example.com1 8888:80 -n=raj1
+
+
+TRY WITH HOST IP n PORT
+NOT with PIDIP
+http://192.168.1.11:8888/
+
+ 23  kubectl get pods -n=raj1 -o wide
+   24  kubectl exec nodehelloworld.example.com1 ls /tmp -n=raj1
+   25  kubectl cp pod.yaml nodehelloworld.example.com1:/tmp -n-raj1
+   26  kubectl cp pod.yaml nodehelloworld.example.com1:/tmp -n=raj1
+   27  kubectl exec nodehelloworld.example.com1 ls /tmp -n=raj1
+   28  kubectl auth
+   29  kubectl auth can-i
+   30  kubectl auth can-i -h
+   31  clear
+   32  kubectl auth can-i read pod
+   33  kubectl auth can-i write pod
+
+
+
+
+
