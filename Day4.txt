@@ -58,6 +58,90 @@ http://192.168.1.11:8888/
    32  kubectl auth can-i read pod
    33  kubectl auth can-i write pod
 
+==============================================================================================
+
+
+Deployment
+==============================
+Replicate --- 1 to 5
+-----Control-------------
+1 POD --- 
+2 POD ------> 22 POD
+3 POD
+4 POD
+5 POD
+
+kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=raj1
+kubectl scale --replicas=5 deployment/my-dep -n=raj1
+kubectl scale --replicas=1 deployment/my-dep -n=raj1
+kubectl scale --replicas=10 deployment/my-dep -n=raj1
+
+
+
+  22  kubectl create -h
+   23  clear
+   24  ls
+   25  kubectl create deploy -h
+   26  c
+   27  clear
+   28  kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3 -n=raj1
+   29  kubectl get deploy -n=raj1
+   30  kubectl get pods -n=raj1
+   31  clear
+   32  kubectl get pods -n=raj1
+   33  kubectl get deploy -n=raj1
+   34  kubectl scale -h
+   35  clear
+   36  kubectl scale --replicas=5 deployment/my-dep -n=raj1
+   37  kubectl get pods -n=raj1
+   38  kubectl get deploy -n=raj1
+   39  kubectl scale --replicas=1 deployment/my-dep -n=raj1
+   40  clear
+   41  kubectl get deploy -n=raj1
+   42  kubectl get pods -n=raj1
+   43  clear
+   44  kubectl scale --replicas=10 deployment/my-dep -n=raj1
+   45  kubectl get deploy -n=raj1
+   46  kubectl get pods -n=raj1
+   47  clear
+   48  kubectl get pods -n=raj1
+   49  clear
+   50  ls
+   51  kubectl get pods -n=raj1
+   52  clear
+   53  kubectl get pods -n=raj1
+   54  kubectl delete pod my-dep-747b4ffb56-4xbpd my-dep-747b4ffb56-nxbnq my-dep-747b4ffb56-p5m6t  my-dep-747b4ffb56-d94st -n=raj1
+   55  kubectl get pods -n=raj1
+   56  history
+
+
+
+
+
+
+Services
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
