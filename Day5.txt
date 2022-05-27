@@ -10,3 +10,46 @@
   392  chef
   393  clear
   394  chef version
+
+
+How to test single Recipe?
+$ chef-apply filename.rb
+
+file.rb
+=============================
+file '/opt/first.txt'
+
+file '/opt/first.txt' do
+	action :delete
+end
+
+file '/opt/content.txt' do
+	content "This is my first program of chef"
+	mode 755
+	owner rajesh
+end
+
+
+httpd
+create a index.html
+copy index.htmkl
+start
+
+package 'name' do
+  package_name               "httpd"
+end
+
+file 'index.html' do
+  content                    "<h1> Welcome to DevOpsSchool Chef Class</h1>"
+end
+
+bash 'extract_module' do
+  code <<-EOH
+                cp index.html /var/www/html/
+  EOH
+end
+
+service 'httpd' do
+  service_name         "httpd"
+  action               :start
+end
