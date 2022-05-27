@@ -1,0 +1,12 @@
+ 383  wget https://packages.chef.io/files/stable/chef-workstation/22.5.923/el/7/chef-workstation-22.5.923-1.el7.x86_64.rpm
+  384  clear
+  385  ls
+  386  rpm -ivh chef-workstation-22.5.923-1.el7.x86_64.rpm
+  387  chef
+  388  clear
+  389  which chef
+  390  ls /usr/bin/chef*
+  391  clear
+  392  chef
+  393  clear
+  394  chef version
