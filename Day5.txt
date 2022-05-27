@@ -53,3 +53,35 @@ service 'httpd' do
   service_name         "httpd"
   action               :start
 end
+
+
+ 486  chef generate cookbook webserver
+  487  clear
+  488  ls
+  489  cd webserver
+  490  ls
+  491  tree
+  492  clear
+  493  ls
+  494  cd ..
+  495  ls
+  496  more web.rb
+  497  clear
+  498  ls
+  499  vi webserver/recipes/default.rb
+  500  clear
+  501  ls
+  502  chef-client --local-mode --runlist 'recipe[webserver]'
+  503  clear
+  504  ls
+  505  mkdir cookbooks
+  506  clear
+  507  ls
+  508  mv webserver/ cookbooks/
+  509  ls
+  510  clear
+  511  ls
+  512  chef-client --local-mode --runlist 'recipe[webserver]'
+  513  clear
+  514  history
+
